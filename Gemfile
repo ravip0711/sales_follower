@@ -35,6 +35,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  # Rspec for testing
+  gem 'rspec-rails', '~> 3.0'
+
+  # Capybara gem
+  gem 'capybara'
+
+  # Factory girl to make factories
+  gem 'factory_girl_rails'
 end
 
 group :development do
