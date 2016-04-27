@@ -76,4 +76,36 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Devise set up for email delivery
+  config.action_mailer.default_url_options = { :host => 'salesfollower.herokuapp.com' }
+
+  # NOTE: You may also need to add this line. When I was setting up the mailer, I 
+  # did not find this line in any other tutorials. I had the development mailer 
+  # working, however I could not get heroku to work. I received this error in the 
+  # heroku logs:
+  # ActionView::Template::Error: Missing host to link to! Please provide the :host 
+  # parameter, set default_url_options[:host], or set :only_path to true
+  
+  # I found the answer here: ActionView::Template::Error: Missing host to link to 
+  # on stackoverflow. If you come across this, then add:
+  # Rails.application.routes.default_url_options[:host] = 'yoursite.herokuapp.com'
+  # to your production.rb file.
+
+  # Devise setup for email delivery via gmail
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
+
+  config.action_mailer.smtp_settings = {
+  address: "smtp.gmail.com",
+  port: 587,
+  domain: ENV["GMAIL_DOMAIN"],
+  authentication: "plain",
+  enable_starttls_auto: true,
+  user_name: ENV["GMAIL_USERNAME"],
+  password: ENV["GMAIL_PASSWORD"]
+  }
+
 end

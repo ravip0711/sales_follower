@@ -23,6 +23,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Devise for Authentication and Authorization
+gem 'devise'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -44,6 +47,11 @@ group :development, :test do
 
   # Factory girl to make factories
   gem 'factory_girl_rails'
+
+  # Will access local variables in .env file before starting app on Heroku
+  # To test devise email in development use the following command:
+  # $foreman start
+  gem 'foreman'
 end
 
 group :development do
@@ -53,4 +61,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+# Added for Herokuapp
+gem 'rails_12factor', group: :production
 

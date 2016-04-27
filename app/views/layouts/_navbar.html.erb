@@ -1,0 +1,11 @@
+<nav>
+  <% if user_signed_in? %>
+    <div>
+      <%= current_user.first_name %>, <%= current_user.last_name %>
+    </div>
+    <ul>
+      <li><%= link_to 'Profile', edit_user_registration_path %></li>
+      <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
+    </ul>
+  <% end %>
+</nav>

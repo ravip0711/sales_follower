@@ -11,3 +11,7 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignores devise email setup for deploying on heroku
+.env
+Procfile
