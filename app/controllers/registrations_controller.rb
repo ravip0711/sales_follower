@@ -1,5 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-
+  
   private
 
   def sign_up_params
@@ -15,6 +15,7 @@ class RegistrationsController < Devise::RegistrationsController
                                  :last_name, 
                                  :email, 
                                  :password, 
-                                 :password_confirmation)
+                                 :password_confirmation,
+                                 :current_password)
   end
 end
