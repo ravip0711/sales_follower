@@ -32,3 +32,17 @@ body {
   display: inline-block;
   padding: 20px 40px 40px 40px;
 }
+
+// for notice styling
+.notice {
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.nohover > li:first-child > a:hover,
+.nohover > li:first-child > a:focus {
+ color: #777
+}
+
+
