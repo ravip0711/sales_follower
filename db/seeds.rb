@@ -9,3 +9,6 @@
 Store.create(name: "Guess")
 Store.create(name: "Express")
 Store.create(name: "Container Store")
+
+# Deal.create(title: "50% Off", description: "this is the best deal in a long time", store_id: 1)
+# Deal.create(title: "80% Off", description: "this is the unqiue deal", store_id: 2)

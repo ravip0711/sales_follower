@@ -8,4 +8,7 @@ class User < ActiveRecord::Base
   def weak_words
     ['salesfollower', self.first_name, self.last_name, self.email]
   end
+
+  has_many :deals
+  has_many :stores, through: :deals
 end
