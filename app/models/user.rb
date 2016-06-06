@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
     ['salesfollower', self.first_name, self.last_name, self.email]
   end
 
-  has_many :deals
-  has_many :stores, through: :deals
+  has_many :deal_users
+  has_many :deals, through: :deal_users
 end
