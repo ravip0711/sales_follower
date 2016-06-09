@@ -268,5 +268,5 @@ Devise.setup do |config|
 
   # zxcvbnable plugin to score password strength
   # A score of less than 3 is not recommended.
-  config.min_password_score = 4
+  config.min_password_score = 3
 end

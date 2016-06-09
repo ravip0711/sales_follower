@@ -69,6 +69,9 @@ group :development do
   # for visual representation of database,
   # use command: rake erd, then open erd.pdf file
   gem "rails-erd"
+
+  # Chrome rails devtool
+  gem 'meta_request'
 end
 
 # Added for Herokuapp

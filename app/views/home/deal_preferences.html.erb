@@ -1,0 +1,15 @@
+<h2><%= current_user.first_name %>, <%= current_user.last_name %></h2>
+<h3>Set Your Preferences</h3>
+
+<h4>All Stores:</h4>
+  <% @stores.each do |store| %>
+  <p><%= store.name %></p>
+  <% end %>
+
+<h4>Your Stores:</h4>
+
+  <% @my_stores.each do |store| %>
+  <p><%= store.name %></p>
+  <% end %>
+
+
