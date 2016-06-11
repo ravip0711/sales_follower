@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
   root 'home#index'
   get 'deal_preferences' => 'home#deal_preferences'
+  post 'add_store' => 'home#add_store'
+  delete 'delete_store' => 'home#delete_store'
   resources :stores, :only => :index
 
   # The priority is based upon order of creation: first created -> highest priority.
